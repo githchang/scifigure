@@ -43,16 +43,6 @@ After installation, invoke it with:
 使用 $scifigure，……
 ```
 
-## Local renderer test
-
-```bash
-python -m pip install -r requirements.txt
-python scripts/validate_skill.py
-python scripts/scifigure.py preview --ir examples/demo_ir.json --output run/previews
-```
-
-The CLI consumes internal Figure IR and exists for deterministic rendering and testing. End users are not required to write Figure IR.
-
 ## Final outputs
 
 After explicit approval:
