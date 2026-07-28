@@ -1,0 +1,142 @@
+{
+  "title": "A General Multimodal Scientific Framework",
+  "subtitle": "One semantic Figure IR rendered with six publication-style visual systems",
+  "figure_type": "methodology_diagram",
+  "reading_direction": "left_to_right",
+  "canvas": {
+    "width": 1600,
+    "height": 900,
+    "background": "#FFFFFF",
+    "margin": 44
+  },
+  "groups": [
+    {"id": "g_input", "label": "Input & Preprocessing", "role": "input"},
+    {"id": "g_repr", "label": "Representation Learning", "role": "representation"},
+    {"id": "g_fusion", "label": "Cross-modal Fusion", "role": "fusion"},
+    {"id": "g_train", "label": "Training Objectives", "role": "training"},
+    {"id": "g_output", "label": "Prediction", "role": "output"}
+  ],
+  "nodes": [
+    {
+      "id": "text_input",
+      "label": "Text Input",
+      "type": "document",
+      "group": "g_input",
+      "role": "input",
+      "details": ["token sequence", "metadata"],
+      "dimension": "[B, L]"
+    },
+    {
+      "id": "signal_input",
+      "label": "Signal Input",
+      "type": "data",
+      "group": "g_input",
+      "role": "input",
+      "details": ["multivariate series", "normalization"],
+      "dimension": "[B, T, C]"
+    },
+    {
+      "id": "text_encoder",
+      "label": "Text Encoder",
+      "type": "encoder",
+      "group": "g_repr",
+      "role": "representation",
+      "details": ["contextual tokens", "projection"],
+      "dimension": "H_text"
+    },
+    {
+      "id": "signal_encoder",
+      "label": "Signal Encoder",
+      "type": "encoder",
+      "group": "g_repr",
+      "role": "representation",
+      "details": ["patch embedding", "temporal blocks"],
+      "dimension": "H_signal"
+    },
+    {
+      "id": "alignment",
+      "label": "Alignment Module",
+      "type": "attention",
+      "group": "g_fusion",
+      "role": "fusion",
+      "details": ["cross attention", "feature calibration"],
+      "dimension": "Z_align"
+    },
+    {
+      "id": "graph_reasoner",
+      "label": "Relation Graph Reasoner",
+      "type": "graph",
+      "group": "g_fusion",
+      "role": "graph",
+      "details": ["weighted edges", "message passing"],
+      "dimension": "G=(V,E)"
+    },
+    {
+      "id": "fusion",
+      "label": "Fusion MLP",
+      "type": "process",
+      "group": "g_fusion",
+      "role": "fusion",
+      "details": ["concatenation", "nonlinear projection"],
+      "dimension": "Z_fused"
+    },
+    {
+      "id": "task_loss",
+      "label": "Task Loss",
+      "type": "loss",
+      "group": "g_train",
+      "role": "loss",
+      "details": ["supervised objective"]
+    },
+    {
+      "id": "contrastive_loss",
+      "label": "Contrastive Loss",
+      "type": "loss",
+      "group": "g_train",
+      "role": "loss",
+      "details": ["cross-view consistency"]
+    },
+    {
+      "id": "classifier",
+      "label": "Prediction Head",
+      "type": "classifier",
+      "group": "g_output",
+      "role": "output",
+      "details": ["linear classifier", "confidence calibration"]
+    },
+    {
+      "id": "probabilities",
+      "label": "Class Probabilities",
+      "type": "probability",
+      "group": "g_output",
+      "role": "output",
+      "dimension": "p(y|x)"
+    }
+  ],
+  "edges": [
+    {"source": "text_input", "target": "text_encoder", "type": "data_flow"},
+    {"source": "signal_input", "target": "signal_encoder", "type": "data_flow"},
+    {"source": "text_encoder", "target": "alignment", "type": "data_flow", "label": "Q"},
+    {"source": "signal_encoder", "target": "alignment", "type": "data_flow", "label": "K,V"},
+    {"source": "alignment", "target": "graph_reasoner", "type": "data_flow"},
+    {"source": "graph_reasoner", "target": "fusion", "type": "data_flow"},
+    {"source": "text_encoder", "target": "fusion", "type": "skip"},
+    {"source": "signal_encoder", "target": "fusion", "type": "skip"},
+    {"source": "fusion", "target": "classifier", "type": "data_flow"},
+    {"source": "classifier", "target": "probabilities", "type": "data_flow"},
+    {"source": "classifier", "target": "task_loss", "type": "training_only"},
+    {"source": "alignment", "target": "contrastive_loss", "type": "training_only"},
+    {"source": "contrastive_loss", "target": "alignment", "type": "gradient"},
+    {"source": "task_loss", "target": "classifier", "type": "gradient"}
+  ],
+  "annotations": [
+    {
+      "id": "note_training",
+      "text": "Dashed warm connections are training-only supervision; they are removed during inference.",
+      "kind": "note"
+    }
+  ],
+  "metadata": {
+    "locked_terms": ["Text Encoder", "Signal Encoder", "Relation Graph Reasoner", "Prediction Head"]
+  }
+}

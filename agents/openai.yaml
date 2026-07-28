@@ -1,0 +1,4 @@
+interface:
+  display_name: "SciFigure"
+  short_description: "Free-form scientific input to six styled previews and editable exports"
+  default_prompt: "Use $scifigure with my free-form scientific content, attachments, and drawing requirements. Infer one consistent scientific structure, generate six same-content PNG style previews, revise the selected style, and finalize the approved version as PNG, SVG, and VSDX. Do not require method.md or a fixed input template."

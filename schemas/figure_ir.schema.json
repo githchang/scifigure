@@ -1,0 +1,95 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/scifigure/figure_ir.schema.json",
+  "title": "SciFigure Semantic Figure IR",
+  "type": "object",
+  "required": ["title", "nodes", "edges"],
+  "properties": {
+    "title": {"type": "string", "minLength": 1},
+    "subtitle": {"type": ["string", "null"]},
+    "figure_type": {"type": "string", "default": "methodology_diagram"},
+    "reading_direction": {"enum": ["left_to_right", "top_to_bottom"]},
+    "canvas": {
+      "type": "object",
+      "properties": {
+        "width": {"type": "integer", "minimum": 800},
+        "height": {"type": "integer", "minimum": 450},
+        "background": {"type": "string"},
+        "margin": {"type": "integer", "minimum": 0}
+      },
+      "additionalProperties": false
+    },
+    "groups": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "label"],
+        "properties": {
+          "id": {"type": "string", "minLength": 1},
+          "label": {"type": "string", "minLength": 1},
+          "role": {"type": "string"},
+          "note": {"type": ["string", "null"]},
+          "locked": {"type": "boolean"},
+          "metadata": {"type": "object"}
+        },
+        "additionalProperties": false
+      }
+    },
+    "nodes": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["id", "label"],
+        "properties": {
+          "id": {"type": "string", "minLength": 1},
+          "label": {"type": "string", "minLength": 1},
+          "type": {"type": "string"},
+          "group": {"type": ["string", "null"]},
+          "role": {"type": ["string", "null"]},
+          "details": {"type": "array", "items": {"type": "string"}},
+          "dimension": {"type": ["string", "null"]},
+          "note": {"type": ["string", "null"]},
+          "locked": {"type": "boolean"},
+          "metadata": {"type": "object"}
+        },
+        "additionalProperties": false
+      }
+    },
+    "edges": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["source", "target"],
+        "properties": {
+          "source": {"type": "string"},
+          "target": {"type": "string"},
+          "type": {
+            "enum": ["data_flow", "control_flow", "residual", "skip", "feedback", "training_only", "reference", "gradient"]
+          },
+          "label": {"type": ["string", "null"]},
+          "locked": {"type": "boolean"},
+          "metadata": {"type": "object"}
+        },
+        "additionalProperties": false
+      }
+    },
+    "annotations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "text"],
+        "properties": {
+          "id": {"type": "string"},
+          "text": {"type": "string"},
+          "target": {"type": ["string", "null"]},
+          "kind": {"type": "string"},
+          "metadata": {"type": "object"}
+        },
+        "additionalProperties": false
+      }
+    },
+    "metadata": {"type": "object"}
+  },
+  "additionalProperties": false
+}

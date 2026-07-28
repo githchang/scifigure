@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "scifigure"
+version = "0.2.0"
+description = "Free-form scientific input, deterministic six-style previews, and editable PNG/SVG/VSDX exports"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "SciFigure Contributors"}]
+dependencies = [
+  "cairosvg>=2.7,<3",
+  "pillow>=10,<12"
+]
+
+[project.scripts]
+scifigure = "scifigure.cli:main"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["scifigure*"]
+
+[tool.setuptools.package-data]
+scifigure = ["style_packs/*.json", "data/*.json"]

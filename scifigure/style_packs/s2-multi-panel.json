@@ -1,0 +1,38 @@
+{
+  "id": "s2-multi-panel",
+  "display_name": "S2 Multi-panel Decomposition",
+  "layout": "multi_panel",
+  "font_family": "Arial, Noto Sans, sans-serif",
+  "title_font_family": "Arial, Noto Sans, sans-serif",
+  "text_primary": "#172033",
+  "text_secondary": "#5D6673",
+  "canvas_background": "#FFFFFF",
+  "group_fill_opacity": 0.30,
+  "group_dashed": false,
+  "node_radius": 12,
+  "node_border_width": 1.4,
+  "density": "medium",
+  "semantic_colors": {
+    "input": {"fill": "#EDF5FF", "stroke": "#7EA8D8"},
+    "data": {"fill": "#EDF5FF", "stroke": "#7EA8D8"},
+    "representation": {"fill": "#EEF8F1", "stroke": "#7AAE84"},
+    "process": {"fill": "#FFF7E7", "stroke": "#D3A75F"},
+    "fusion": {"fill": "#F2EDFF", "stroke": "#9381C7"},
+    "training": {"fill": "#FDEFF1", "stroke": "#CF7B83"},
+    "loss": {"fill": "#FDEFF1", "stroke": "#CF7B83"},
+    "output": {"fill": "#EAF8F7", "stroke": "#5EA7A2"},
+    "graph": {"fill": "#F2EDFF", "stroke": "#9381C7"},
+    "static": {"fill": "#F4F5F7", "stroke": "#929BA8"}
+  },
+  "group_colors": ["#EDF5FF", "#EEF8F1", "#FFF7E7", "#F2EDFF", "#FDEFF1", "#EAF8F7"],
+  "edge_styles": {
+    "data_flow": {"color": "#38424F", "width": 2.0, "dashed": false},
+    "control_flow": {"color": "#222A35", "width": 2.2, "dashed": false},
+    "residual": {"color": "#8470B4", "width": 1.8, "dashed": false},
+    "skip": {"color": "#637286", "width": 1.5, "dashed": false},
+    "feedback": {"color": "#8D76B9", "width": 1.7, "dashed": true},
+    "training_only": {"color": "#D4934E", "width": 1.7, "dashed": true},
+    "reference": {"color": "#9EA7B2", "width": 1.3, "dashed": true},
+    "gradient": {"color": "#C96D72", "width": 1.6, "dashed": true}
+  }
+}

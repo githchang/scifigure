@@ -1,0 +1,38 @@
+{
+  "id": "s1-compact-modular",
+  "display_name": "S1 Compact Modular Architecture",
+  "layout": "compact_modular",
+  "font_family": "Arial, Noto Sans, sans-serif",
+  "title_font_family": "Georgia, Times New Roman, serif",
+  "text_primary": "#172033",
+  "text_secondary": "#526071",
+  "canvas_background": "#FFFFFF",
+  "group_fill_opacity": 0.34,
+  "group_dashed": true,
+  "node_radius": 8,
+  "node_border_width": 1.5,
+  "density": "high",
+  "semantic_colors": {
+    "input": {"fill": "#E9F2FF", "stroke": "#6C9BD2"},
+    "data": {"fill": "#E9F2FF", "stroke": "#6C9BD2"},
+    "representation": {"fill": "#EAF7EE", "stroke": "#68A879"},
+    "process": {"fill": "#F6F1FF", "stroke": "#8E7CC3"},
+    "fusion": {"fill": "#FFF3E4", "stroke": "#D69B4D"},
+    "training": {"fill": "#FDEDEE", "stroke": "#C96B72"},
+    "loss": {"fill": "#FDEDEE", "stroke": "#C96B72"},
+    "output": {"fill": "#E7F7F5", "stroke": "#4C9F98"},
+    "graph": {"fill": "#F4EEFF", "stroke": "#7F67B4"},
+    "static": {"fill": "#F2F4F7", "stroke": "#8A95A5"}
+  },
+  "group_colors": ["#EAF2FF", "#EDF8F2", "#F3EEFF", "#FFF4E5", "#E9F7F6", "#FCEEEF"],
+  "edge_styles": {
+    "data_flow": {"color": "#38475A", "width": 2.0, "dashed": false},
+    "control_flow": {"color": "#202936", "width": 2.3, "dashed": false},
+    "residual": {"color": "#7561A8", "width": 1.8, "dashed": false},
+    "skip": {"color": "#6A7A8C", "width": 1.5, "dashed": false},
+    "feedback": {"color": "#9A77C7", "width": 1.8, "dashed": true},
+    "training_only": {"color": "#D48743", "width": 1.7, "dashed": true},
+    "reference": {"color": "#9AA4B2", "width": 1.3, "dashed": true},
+    "gradient": {"color": "#C66565", "width": 1.6, "dashed": true}
+  }
+}

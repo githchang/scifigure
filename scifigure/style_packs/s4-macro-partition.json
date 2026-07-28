@@ -1,0 +1,38 @@
+{
+  "id": "s4-macro-partition",
+  "display_name": "S4 Macro Partition",
+  "layout": "macro_partition",
+  "font_family": "Arial, Noto Sans, sans-serif",
+  "title_font_family": "Arial, Noto Sans, sans-serif",
+  "text_primary": "#172033",
+  "text_secondary": "#5E6876",
+  "canvas_background": "#FFFFFF",
+  "group_fill_opacity": 0.45,
+  "group_dashed": false,
+  "node_radius": 14,
+  "node_border_width": 1.4,
+  "density": "low",
+  "semantic_colors": {
+    "input": {"fill": "#EEF5FF", "stroke": "#84A6CF"},
+    "data": {"fill": "#EEF5FF", "stroke": "#84A6CF"},
+    "representation": {"fill": "#EEF8F1", "stroke": "#82A98A"},
+    "process": {"fill": "#F4F0FF", "stroke": "#9A89BF"},
+    "fusion": {"fill": "#FFF4E7", "stroke": "#D1A060"},
+    "training": {"fill": "#FCEFF1", "stroke": "#C98289"},
+    "loss": {"fill": "#FCEFF1", "stroke": "#C98289"},
+    "output": {"fill": "#EAF7F4", "stroke": "#68A298"},
+    "graph": {"fill": "#F4F0FF", "stroke": "#9A89BF"},
+    "static": {"fill": "#F4F5F7", "stroke": "#9BA3AD"}
+  },
+  "group_colors": ["#EEF5FF", "#EEF8F1", "#FFF4E7", "#F4F0FF", "#FCEFF1", "#EAF7F4"],
+  "edge_styles": {
+    "data_flow": {"color": "#3D4652", "width": 2.2, "dashed": false},
+    "control_flow": {"color": "#252B34", "width": 2.4, "dashed": false},
+    "residual": {"color": "#806DA7", "width": 1.8, "dashed": false},
+    "skip": {"color": "#6C7786", "width": 1.5, "dashed": false},
+    "feedback": {"color": "#8872AE", "width": 1.8, "dashed": true},
+    "training_only": {"color": "#CF8D49", "width": 1.8, "dashed": true},
+    "reference": {"color": "#9CA5B0", "width": 1.3, "dashed": true},
+    "gradient": {"color": "#C66D75", "width": 1.6, "dashed": true}
+  }
+}
