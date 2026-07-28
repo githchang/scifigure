@@ -8,18 +8,20 @@ It accepts **completely free-form input** from the current conversation and atta
 
 1. The user provides any scientific content and drawing requirements in their own format.
 2. Codex extracts one internal semantic Figure IR.
-3. SciFigure generates six PNG previews with identical scientific content and different visual styles.
+3. SciFigure renders six PNG previews from the same Figure IR using six fixed reference-based styles.
 4. The user selects one style and provides free-form revision feedback.
 5. After explicit approval, SciFigure exports the approved figure as PNG, SVG, and editable VSDX.
 
-## Six built-in styles
+## Six fixed built-in styles
 
-1. Compact Modular Architecture
-2. Multi-panel Decomposition
-3. Dense Engineering Architecture
-4. Macro Partition
-5. Rigorous Relation Graph
-6. PaperBanana Soft Scientific
+1. **S1 CATDM Reference Scientific Style** — top overview, lower detail panels, white canvas, gray dashed regions, local blue/green/orange/purple accents.
+2. **S2 Cross-Modal Reconstruction Multi-Panel Style** — overview plus `(a)(b)(c)(d)` detail panels with coordinated pink, blue, yellow, green, and purple modules.
+3. **S3 TSPulse Dense Engineering Style** — dense stage-based engineering layout, compact blocks, tensor annotations, blue/purple/teal/peach hierarchy.
+4. **S4 GTM / Fourier Panel Style** — left model flow plus right explanatory panels, cream input blocks, green backbone, blue/cyan analysis areas.
+5. **S5 Adaptive Gating Structured Style** — structured gating container, alignment layer, aligned branches, red/blue cross-links, orange decoder/output emphasis.
+6. **S6 Verbal Reasoning Narrative Block Style** — two large narrative containers using gray-white, dusty blue, dusty pink, and muted lavender.
+
+All six styles preserve the same scientific modules, labels, edge directions, equations, and training/inference meaning.
 
 ## Example request
 
@@ -35,9 +37,11 @@ The request may instead reference uploaded papers, source code, figures, sketche
 
 ## Install as a Codex Skill
 
-Place this repository under a Codex skills directory, or install it with the skill installer supported by your Codex environment. The repository root must directly contain `SKILL.md`.
+```text
+$skill-installer install https://github.com/githchang/scifigure
+```
 
-After installation, invoke it with:
+Restart Codex after installation, then invoke:
 
 ```text
 使用 $scifigure，……
