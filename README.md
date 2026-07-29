@@ -8,20 +8,26 @@ It accepts **completely free-form input** from the current conversation and atta
 
 1. The user provides any scientific content and drawing requirements in their own format.
 2. Codex extracts one internal semantic Figure IR.
-3. SciFigure renders six PNG previews from the same Figure IR using six fixed built-in styles.
+3. SciFigure renders six PNG previews from the same Figure IR using six fixed built-in templates.
 4. The user selects one style and provides free-form revision feedback.
 5. After explicit approval, SciFigure exports the approved figure as PNG, SVG, and editable VSDX.
 
 ## Six fixed built-in styles
 
-1. **S1** — top overview, lower detail panels, white canvas, gray dashed regions, and restrained blue, green, orange, and purple accents.
-2. **S2** — overview plus labeled multi-panel decomposition with coordinated low-saturation pink, blue, yellow, green, and purple modules.
-3. **S3** — dense stage-based engineering layout with compact blocks, tensor annotations, and blue, purple, teal, and peach hierarchy.
-4. **S4** — left model flow plus right explanatory panels with cream input blocks, green backbone stages, and blue or cyan analysis areas.
-5. **S5** — structured gating layout with a prominent alignment layer, aligned branches, controlled cross-links, and orange output emphasis.
-6. **S6** — two large narrative containers using gray-white, dusty blue, dusty pink, and muted lavender.
+1. **S1** — CATDM-style top overview and lower detail panels, with bright blue, green, orange, teal, and purple local accents.
+2. **S2** — cross-modal overview plus labeled multi-panel decomposition using vivid coordinated pink, blue, yellow, green, purple, and teal modules.
+3. **S3** — TSPulse-style dense engineering stages with high-contrast tensor annotations and vivid blue, purple, cyan, peach, and green hierarchy.
+4. **S4** — GTM/Fourier left model flow plus right explanatory panels with bright cream, green, blue, cyan, orange, and teal regions.
+5. **S5** — adaptive-gating structure with a prominent blue alignment layer, green branches, red training links, and orange output emphasis.
+6. **S6** — verbal-reasoning narrative containers using brighter dusty blue, pink, lavender, teal, and blue-gray modules.
 
 All six styles preserve the same scientific modules, labels, edge directions, equations, and training/inference meaning.
+
+## Rendering quality
+
+- PNG previews are rasterized at a minimum internal scale of 2.75x.
+- Contact sheets use Lanczos downsampling rather than nearest-neighbour resizing.
+- Fixed palettes use stronger fill saturation, clearer borders, darker text, and higher-contrast arrows.
 
 ## Example request
 
