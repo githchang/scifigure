@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "scifigure"
-version = "0.5.0"
-description = "Free-form scientific input, six independent fixed-template preview systems, and editable PNG/SVG/VSDX exports"
+version = "0.5.1"
+description = "Free-form scientific input, six fixed-template vivid high-resolution previews, and editable PNG/SVG/VSDX exports"
 requires-python = ">=3.10"
 license = {text = "MIT"}
 authors = [{name = "SciFigure Contributors"}]
