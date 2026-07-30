@@ -14,12 +14,12 @@ It accepts **completely free-form input** from the current conversation and atta
 
 ## Six fixed built-in styles
 
-1. **S1** — CATDM-style top overview and lower detail panels, with bright blue, green, orange, teal, and purple local accents.
-2. **S2** — cross-modal overview plus labeled multi-panel decomposition using vivid coordinated pink, blue, yellow, green, purple, and teal modules.
-3. **S3** — TSPulse-style dense engineering stages with high-contrast tensor annotations and vivid blue, purple, cyan, peach, and green hierarchy.
-4. **S4** — GTM/Fourier left model flow plus right explanatory panels with bright cream, green, blue, cyan, orange, and teal regions.
-5. **S5** — adaptive-gating structure with a prominent blue alignment layer, green branches, red training links, and orange output emphasis.
-6. **S6** — verbal-reasoning narrative containers using brighter dusty blue, pink, lavender, teal, and blue-gray modules.
+1. **S1** — botanical sage modular overview with soft green hierarchy, muted blue inputs, warm cream fusion, and restrained peach training accents.
+2. **S2** — balanced pastel multi-panel decomposition using coordinated pink, blue, sage, lavender, peach, and orange modules.
+3. **S3** — high-contrast dense engineering stages using cobalt blue, yellow, orange, sage green, lavender, and cyan accents.
+4. **S4** — multiview planning panel layout using lavender, soft green, peach, cyan, cream, and pale blue regions.
+5. **S5** — alignment-gating structure with a prominent blue alignment layer, green branches, red training links, and yellow-orange output emphasis.
+6. **S6** — clinical pastel narrative containers using blue, mint, lavender, pink, peach, and teal accents.
 
 All six styles preserve the same scientific modules, labels, edge directions, equations, and training/inference meaning.
 
@@ -27,7 +27,7 @@ All six styles preserve the same scientific modules, labels, edge directions, eq
 
 - PNG previews are rasterized at a minimum internal scale of 2.75x.
 - Contact sheets use Lanczos downsampling rather than nearest-neighbour resizing.
-- Fixed palettes use stronger fill saturation, clearer borders, darker text, and higher-contrast arrows.
+- Reference-derived palettes use light publication fills, medium-dark borders, dark text, and high-contrast logical arrows.
 
 ## Example request
 
