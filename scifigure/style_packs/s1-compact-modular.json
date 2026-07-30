@@ -1,48 +1,134 @@
 {
   "id": "s1-compact-modular",
-  "display_name": "S1 CATDM Reference Scientific Style",
-  "reference_template": "CATDM / CCoAt",
+  "display_name": "S1 Botanical Sage Modular Style",
+  "reference_template": "Botanical Sage Scientific Diagram",
   "template_locked": true,
   "layout": "compact_modular",
   "font_family": "Arial, Noto Sans, sans-serif",
   "title_font_family": "Georgia, Times New Roman, serif",
-  "text_primary": "#111827",
-  "text_secondary": "#475569",
+  "text_primary": "#1F2937",
+  "text_secondary": "#4B5563",
   "canvas_background": "#FFFFFF",
-  "group_fill_opacity": 0.18,
+  "group_fill_opacity": 0.22,
   "group_dashed": true,
   "node_radius": 8,
-  "node_border_width": 1.65,
+  "node_border_width": 1.7,
   "density": "high",
   "semantic_colors": {
-    "input": {"fill": "#DFF0F8", "stroke": "#8BB8D8", "text": "#111827"},
-    "data": {"fill": "#DFF0F8", "stroke": "#8BB8D8", "text": "#111827"},
-    "representation": {"fill": "#E8F4D8", "stroke": "#9FBF79", "text": "#111827"},
-    "process": {"fill": "#F6F7F8", "stroke": "#9CA3AF", "text": "#111827"},
-    "fusion": {"fill": "#F8E2B7", "stroke": "#D89A4E", "text": "#111827"},
-    "training": {"fill": "#FBE2D8", "stroke": "#E08A5C", "text": "#111827"},
-    "loss": {"fill": "#FBE2D8", "stroke": "#E08A5C", "text": "#111827"},
-    "output": {"fill": "#DCEFEA", "stroke": "#8FBEB0", "text": "#111827"},
-    "graph": {"fill": "#EADCF4", "stroke": "#B49ACA", "text": "#111827"},
-    "static": {"fill": "#F6F7F8", "stroke": "#A1A1AA", "text": "#111827"}
+    "input": {
+      "fill": "#BDCEEB",
+      "stroke": "#6F8FBF",
+      "text": "#1F2937"
+    },
+    "data": {
+      "fill": "#BDCEEB",
+      "stroke": "#6F8FBF",
+      "text": "#1F2937"
+    },
+    "representation": {
+      "fill": "#DAEBD0",
+      "stroke": "#7FA765",
+      "text": "#1F2937"
+    },
+    "process": {
+      "fill": "#EBF5E7",
+      "stroke": "#8AAE7A",
+      "text": "#1F2937"
+    },
+    "fusion": {
+      "fill": "#FFF1CC",
+      "stroke": "#C8A04D",
+      "text": "#1F2937"
+    },
+    "training": {
+      "fill": "#F8DAB9",
+      "stroke": "#D09057",
+      "text": "#1F2937"
+    },
+    "loss": {
+      "fill": "#F8DAB9",
+      "stroke": "#D09057",
+      "text": "#1F2937"
+    },
+    "output": {
+      "fill": "#BDDEAA",
+      "stroke": "#6B9F4B",
+      "text": "#1F2937"
+    },
+    "graph": {
+      "fill": "#C5E0B3",
+      "stroke": "#5F8F43",
+      "text": "#1F2937"
+    },
+    "static": {
+      "fill": "#F4F7F2",
+      "stroke": "#98A691",
+      "text": "#1F2937"
+    }
   },
-  "group_colors": ["#F7FBFE", "#F8FCF3", "#FFFBF3", "#FBF8FE", "#FFF9F6", "#F6FCFA"],
-  "glyph_palette": ["#69A8CF", "#58A997", "#8FB95F", "#D89A4E", "#A985C3", "#E08A5C"],
+  "group_colors": [
+    "#EBF5E7",
+    "#DAEBD0",
+    "#FFF1CC",
+    "#F5F8FD",
+    "#FDF4E9",
+    "#EEF7EA"
+  ],
+  "glyph_palette": [
+    "#4672C4",
+    "#9BCD7C",
+    "#6B9F4B",
+    "#C8A04D",
+    "#7FA765",
+    "#D09057"
+  ],
   "edge_styles": {
-    "data_flow": {"color": "#6B9FC4", "width": 2.0, "dashed": false},
-    "control_flow": {"color": "#374151", "width": 2.1, "dashed": false},
-    "residual": {"color": "#A985C3", "width": 1.8, "dashed": false},
-    "skip": {"color": "#94A3B8", "width": 1.5, "dashed": true},
-    "feedback": {"color": "#A985C3", "width": 1.7, "dashed": true},
-    "training_only": {"color": "#E08A5C", "width": 1.8, "dashed": true},
-    "reference": {"color": "#A8A8A8", "width": 1.3, "dashed": true},
-    "gradient": {"color": "#D97745", "width": 1.7, "dashed": true}
+    "data_flow": {
+      "color": "#4672C4",
+      "width": 2.0,
+      "dashed": false
+    },
+    "control_flow": {
+      "color": "#374151",
+      "width": 2.15,
+      "dashed": false
+    },
+    "residual": {
+      "color": "#6F8FBF",
+      "width": 1.85,
+      "dashed": false
+    },
+    "skip": {
+      "color": "#8B97A6",
+      "width": 1.5,
+      "dashed": true
+    },
+    "feedback": {
+      "color": "#7FA765",
+      "width": 1.75,
+      "dashed": true
+    },
+    "training_only": {
+      "color": "#D09057",
+      "width": 1.8,
+      "dashed": true
+    },
+    "reference": {
+      "color": "#A3AAA1",
+      "width": 1.3,
+      "dashed": true
+    },
+    "gradient": {
+      "color": "#C87A45",
+      "width": 1.75,
+      "dashed": true
+    }
   },
   "template_rules": {
-    "major_regions": "white canvas with light gray dashed macro regions",
+    "major_regions": "white canvas with soft sage and blue dashed macro regions",
     "main_flow": "top horizontal overview",
     "detail_panels": "bottom module decompositions",
-    "color_usage": "bright transparent-looking pastels used as local accents",
+    "color_usage": "botanical greens, muted blue, and warm cream with restrained peach training accents",
     "forbid_large_colored_regions": true
   }
 }
